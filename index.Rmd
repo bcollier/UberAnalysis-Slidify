@@ -1,0 +1,57 @@
+---
+title       : Uber Analysis of Manhattan Rides
+subtitle    : Plotting Uber Pickups in Manhattan in Septer 2014
+author      : Benjamin Collier
+job         : Assistant Teaching Professor
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Uber Ride Analyis Background
+
+The Uber Ride Analysis App visualizes the ride pickup data in Manhattan. 
+* The app uses data from [the repository of data from FiveThirtyEight](https://github.com/fivethirtyeight/uber-tlc-foil-response). 
+
+* Since the data set is very large, for the purposes of this prototype we only use one month of data (September, 2014)
+
+* This prototype can very easily be made to graph pickups from any location, and with any date range
+
+--- .class #id 
+
+## What it Does
+
+The Uber Ride Analysis Shiny App Takes the Following as Inputs
+* Date (from 1 to 30) of the month to plot
+* Start time (from 0 to 24 hours) to plot
+* End time (from 0 to 24 hours) to plot
+
+The Uber Ride Analysis app then plots the pickup points on a Google map
+
+--- .class #id 
+
+## Running R Code in Slidify
+
+Part of the course requirement for this slide deck is that we run some r code in our slidify deck. I can't really do anything meaningful without loading a large data file. So here is some code for fun. It creates a an array of 1000 data points from the normal distribution and finds the mean and standard deviation. It should be close to zero and one respectively, but who knows, it's stochiastic right?
+
+```{r echo=TRUE, eval=TRUE}
+dist <- rnorm(1000)
+
+mean(dist)
+sd(dist)
+
+```
+
+--- .class #id 
+
+## Running R Code in Slidify
+
+More information about the uber data set and other work that has been done with it can be found at the links below:
+* [Article "Uber is Taking Millions of Manhattan Rides Away from Taxies"](http://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/)
+
+* [Article "Is Uber Making NYC Rush Hour Traffic Worse?"](http://fivethirtyeight.com/features/is-uber-making-nyc-rush-hour-traffic-worse/)
+
+* [Article "Uber is Serving New York's Outer Boroughs More Than Taxis Are"](http://fivethirtyeight.com/features/uber-is-serving-new-yorks-outer-boroughs-more-than-taxis-are/)
